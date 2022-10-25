@@ -1,0 +1,22 @@
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+    time: 0,
+    //date: new Date()
+}
+
+const timeSlice = createSlice({
+    name: 'time',
+    initialState,
+    reducers: {
+        increment(state) {
+            state.time += 1;
+        }
+    }
+});
+
+export const { increment } = timeSlice.actions;
+
+//export const selectTime = state => state.time.time;
+
+export default timeSlice.reducer;
